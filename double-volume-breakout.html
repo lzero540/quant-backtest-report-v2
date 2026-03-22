@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>倍量过左峰 | 回测报告</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.kpi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin: 24px 0; }
+.kpi { background: #f8f9fa; border-radius: 12px; padding: 20px; text-align: center; }
+.kpi .label { font-size: 13px; color: #666; margin-bottom: 8px; }
+.kpi .value { font-size: 28px; font-weight: 700; }
+.pos { color: #e63946; } .neg { color: #457b9d; }
+.neutral { color: #2a9d8f; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html">📋 总览</a>
+  <a href="darvas-box.html">📦 Darvas</a>
+  <a href="sma-cross.html">📊 SMA</a>
+  <a href="triple-screen.html">🔬 Triple</a>
+  <a href="lucky-lobster.html">🦞</a>
+  <a href="lucky-lobster-v2.html">🦞</a>
+  <a href="lucky-lobster-v3.html">🦞</a>
+</nav>
+<div class="container">
+<div class="header">
+  <h1>📈 倍量过左峰策略</h1>
+  <p class="subtitle">A股 · 2016-01-01 ~ 2026-03-20 · 62只股票</p>
+  <p class="book-ref">
+    核心逻辑：倍量过左峰（量≥2x昨日 AND 突破20日最高点）+ 4日内缩量小K确认 + 止损低部<br>
+    <b>买入：</b>量≥2x昨日 AND 收盘突破20日最高点（左峰非昨日冲高形成）<br>
+    <b>确认：</b>突破后4日内出现缩量小K线（主力控盘特征）<br>
+    <b>止损：</b>跌破突破K线最低价<br>
+    <b>止盈：</b>3R（4.5%账户）或最高点回落1.5%
+  </p>
+</div>
+
+<div class="kpi-grid">
+  <div class="kpi">
+    <div class="label">累计收益</div>
+    <div class="value neg">-5.43%</div>
+  </div>
+  <div class="kpi">
+    <div class="label">年化收益</div>
+    <div class="value neg">-0.57%</div>
+  </div>
+  <div class="kpi">
+    <div class="label">夏普比率</div>
+    <div class="value neg">-0.047</div>
+  </div>
+  <div class="kpi">
+    <div class="label">最大回撤</div>
+    <div class="value neg">-15.2%</div>
+  </div>
+  <div class="kpi">
+    <div class="label">交易次数</div>
+    <div class="value">3299</div>
+  </div>
+  <div class="kpi">
+    <div class="label">胜率</div>
+    <div class="value neutral">34.87%</div>
+  </div>
+  <div class="kpi">
+    <div class="label">买入</div>
+    <div class="value pos">1650</div>
+  </div>
+  <div class="kpi">
+    <div class="label">卖出</div>
+    <div class="value neg">1649</div>
+  </div>
+  <div class="kpi">
+    <div class="label">最终权益</div>
+    <div class="value">¥945705</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>策略逻辑</h2>
+  <div class="rule-grid">
+    <div class="rule-box">
+      <h3>📌 买入信号</h3>
+      <ol>
+        <li>今日成交量 ≥ 昨日成交量 × 2（倍量）</li>
+        <li>今日收盘价突破近20日最高价</li>
+        <li>该最高价形成日不是昨天（左峰非冲高回落）</li>
+      </ol>
+    </div>
+    <div class="rule-box">
+      <h3>🔍 控盘确认</h3>
+      <ol>
+        <li>突破后4日内出现倍量K线</li>
+        <li>K线涨跌幅 &lt; 2%（小阳/小阴）</li>
+        <li>成交量 &lt; 突破日50%（缩量，主力未出货）</li>
+      </ol>
+    </div>
+    <div class="rule-box">
+      <h3>🛡️ 风险管理</h3>
+      <ol>
+        <li>止损：跌破突破K线最低价</li>
+        <li>止盈：3R（账户4.5%）</li>
+        <li>回落止盈：最高点回落1.5%</li>
+        <li>仓位：Kelly公式25%，最大20%</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="footer">龙虾量化回测框架 · 2026-03-23 · 10年 × 62只A股</div>
+</div>
+</body>
+</html>

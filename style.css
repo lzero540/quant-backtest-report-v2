@@ -1,0 +1,50 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; background: #0f1117; color: #e0e0e0; min-height: 100vh; }
+nav { background: #161825; border-bottom: 1px solid #252a3d; padding: 0 24px; display: flex; gap: 4px; position: sticky; top: 0; z-index: 100; }
+nav a { color: #666; text-decoration: none; padding: 14px 18px; font-size: 14px; border-bottom: 2px solid transparent; transition: all .2s; }
+nav a:hover { color: #e0e0e0; }
+nav a.active { color: #3dd68c; border-bottom-color: #3dd68c; }
+.container { max-width: 1200px; margin: 0 auto; padding: 28px 24px; }
+.header { margin-bottom: 32px; }
+.header h1 { color: #fff; font-size: 26px; margin-bottom: 6px; }
+.subtitle { color: #888; font-size: 15px; }
+.meta { color: #555; font-size: 13px; margin-top: 4px; }
+.book-ref { color: #666; font-size: 13px; margin-top: 8px; background: #1a1d2e; display: inline-block; padding: 4px 12px; border-radius: 20px; border: 1px solid #252a3d; }
+.tag-icon { font-size: 40px; margin-bottom: 8px; }
+.kpi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-bottom: 28px; }
+.kpi { background: #1a1d2e; border: 1px solid #252a3d; border-radius: 10px; padding: 14px 16px; }
+.kpi .label { color: #555; font-size: 11px; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; }
+.kpi .value { font-size: 20px; font-weight: 600; }
+.pos { color: #3dd68c; } .neg { color: #ff6b6b; }
+.chart-box { background: #1a1d2e; border: 1px solid #252a3d; border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+.chart-box.full { }
+.chart-title { color: #888; font-size: 13px; margin-bottom: 12px; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { text-align: left; color: #555; padding: 10px 12px; border-bottom: 1px solid #252a3d; font-weight: 400; font-size: 11px; text-transform: uppercase; }
+td { padding: 10px 12px; border-bottom: 1px solid #1e2130; }
+td.date { color: #666; font-size: 12px; } td.reason { color: #555; font-size: 12px; }
+.tag { padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.tag.buy { background: rgba(61,214,140,.15); color: #3dd68c; }
+.tag.sell { background: rgba(255,107,107,.15); color: #ff6b6b; }
+.section { background: #1a1d2e; border: 1px solid #252a3d; border-radius: 10px; padding: 20px; margin-bottom: 24px; }
+.section h2 { color: #fff; font-size: 15px; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #252a3d; }
+.compare-grid { background: #1a1d2e; border: 1px solid #252a3d; border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
+.compare-row { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr; gap: 0; padding: 14px 20px; border-bottom: 1px solid #1e2130; }
+.compare-row:last-child { border-bottom: none; }
+.compare-row > div { display: flex; align-items: center; }
+.compare-row.header-row { background: #161825; color: #555; font-size: 11px; text-transform: uppercase; letter-spacing: .5px; padding: 10px 20px; }
+.best-row { background: rgba(61,214,140,.05); }
+.legend { display: flex; gap: 20px; margin-bottom: 28px; font-size: 13px; color: #666; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
+.dot.pos { background: #3dd68c; } .dot.neg { background: #ff6b6b; } .dot.best { background: #f0a500; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.card { background: #1a1d2e; border: 1px solid #252a3d; border-radius: 12px; padding: 22px; }
+.card.pos { border-color: rgba(61,214,140,.3); } .card.neg { border-color: rgba(255,107,107,.2); }
+.card-icon { font-size: 32px; margin-bottom: 12px; }
+.card h3 { color: #fff; font-size: 16px; margin-bottom: 8px; }
+.card-ret { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+.card-meta { color: #555; font-size: 12px; line-height: 1.6; margin-bottom: 16px; }
+.btn { display: inline-block; background: #252a3d; color: #e0e0e0; text-decoration: none; padding: 8px 18px; border-radius: 6px; font-size: 13px; transition: background .2s; }
+.btn:hover { background: #333; }
+.footer { color: #333; font-size: 12px; text-align: center; margin-top: 48px; padding-bottom: 24px; }

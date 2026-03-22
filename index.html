@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>龙虾回测报告 | 三策略对比</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a href="index.html" class="active">📋 总览</a>
+  <a href="darvas-box.html">📦 Darvas Box</a>
+  <a href="sma-cross.html">📊 SMA Cross</a>
+  <a href="triple-screen.html">🔬 Triple Screen</a>
+</nav>
+<div class="container">
+  <div class="header">
+    <h1>📊 龙虾量化回测报告</h1>
+    <p class="subtitle">三策略横向对比 · A股 2016-2026 · 10年 · 62只股票</p>
+    <p class="meta">初始资金 ¥100万 · 手续费万三 · 印花税千一</p>
+  </div>
+  <div class="compare-grid">
+    <div class="compare-row header-row">
+      <div>策略</div><div>累计收益</div><div>年化</div><div>夏普</div><div>最大回撤</div><div>交易次数</div><div>胜率</div>
+    </div>
+    <div class="best-row" class="compare-row">
+      <div>📦 Darvas Box</div>
+      <div class="pos">+8.50%</div>
+      <div class="pos">+0.83%</div>
+      <div>+0.178</div>
+      <div class="neg">-69.63%</div>
+      <div>917</div>
+      <div>46.9%</div>
+    </div><div class="compare-row">
+      <div>📊 SMA Cross</div>
+      <div class="neg">-46.57%</div>
+      <div class="neg">-6.18%</div>
+      <div>-0.112</div>
+      <div class="neg">-69.93%</div>
+      <div>1569</div>
+      <div>45.8%</div>
+    </div><div class="compare-row">
+      <div>🔬 Triple Screen</div>
+      <div class="neg">-37.76%</div>
+      <div class="neg">-4.71%</div>
+      <div>-0.111</div>
+      <div class="neg">-60.34%</div>
+      <div>151</div>
+      <div>39.6%</div>
+    </div>
+  </div>
+  <div class="legend">
+    <div class="legend-item"><span class="dot pos"></span> 正收益</div>
+    <div class="legend-item"><span class="dot neg"></span> 负收益</div>
+    <div class="legend-item"><span class="dot best"></span> 最佳策略</div>
+  </div>
+  <div class="cards"><div class="card pos">
+      <div class="card-icon">📦</div>
+      <h3>Darvas Box</h3>
+      <div class="card-ret pos">+8.50%</div>
+      <div class="card-meta">夏普 +0.178 · 回撤 -69.63%<br>交易 917 次 · 胜率 46.85%</div>
+      <a href="darvas-box.html" class="btn">查看详情 →</a>
+    </div><div class="card neg">
+      <div class="card-icon">📊</div>
+      <h3>SMA Cross</h3>
+      <div class="card-ret neg">-46.57%</div>
+      <div class="card-meta">夏普 -0.112 · 回撤 -69.93%<br>交易 1569 次 · 胜率 45.76%</div>
+      <a href="sma-cross.html" class="btn">查看详情 →</a>
+    </div><div class="card neg">
+      <div class="card-icon">🔬</div>
+      <h3>Triple Screen</h3>
+      <div class="card-ret neg">-37.76%</div>
+      <div class="card-meta">夏普 -0.111 · 回撤 -60.34%<br>交易 151 次 · 胜率 39.63%</div>
+      <a href="triple-screen.html" class="btn">查看详情 →</a>
+    </div></div>
+  <div class="footer">龙虾量化回测框架 v2.1 · 2026-03-22</div>
+</div>
+</body>
+</html>
